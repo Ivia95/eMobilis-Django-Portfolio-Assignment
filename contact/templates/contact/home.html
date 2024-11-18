@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #d3d3d3; /* Light grey background */
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .navbar {
+            margin-bottom: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            flex: 1;
+        }
+        h1, h2 {
+            color: #343a40;
+            margin-bottom: 20px;
+        }
+        section {
+            margin-bottom: 40px;
+        }
+        .skills-hobbies {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .skills, .hobbies {
+            width: 45%;
+        }
+        .skills ul, .hobbies ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .skills ul li, .hobbies ul li {
+            background: #007bff;
+            color: #fff;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+        .skills ul li:hover, .hobbies ul li:hover {
+            background: #0056b3;
+        }
+        footer {
+            background: #1a1a1a;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+            width: 100%;
+            margin-top: auto;
+        }
+        .footer-content {
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+        }
+        .footer-content .social-links a {
+            color: #007bff;
+            margin: 0 10px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .footer-content .social-links a:hover {
+            color: #0056b3;
+        }
+        .footer-content p {
+            margin: 10px 0;
+            font-size: 0.9em;
+        }
+        .navbar-nav .nav-link {
+            transition: color 0.3s ease;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">My Portfolio</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About Me</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'contact' %}">Contact Me</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-4">
+        <h1>Welcome to My Portfolio</h1>
+        <p>This is the home page.</p>
+
+        <!-- About Me Section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Here you can include information about yourself.</p>
+        </section>
+
+        <!-- Skills and Hobbies Section -->
+        <section id="skills-hobbies" class="skills-hobbies">
+            <div class="skills">
+                <h2>Skills</h2>
+                <ul>
+                    <li>Computer Programming</li>
+                    <li>Software Development</li>
+                    <li>System Development</li>
+                    <li>Web Development</li>
+                    <li>System Auditing</li>
+                </ul>
+            </div>
+            <div class="hobbies">
+                <h2>Hobbies</h2>
+                <ul>
+                    <li>Travelling</li>
+                    <li>Gaming</li>
+                    <li>Golfing</li>
+                    <li>Hiking</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+    <br>
+    <br>
+
+    <!-- Footer -->
+    <footer class="footer bg-gray-900 shadow-md py-4">
+        <div class="footer-content">
+            <div class="social-links flex justify-center">
+                <a href="https://www.facebook.com/andrew.ivia" class="hover:text-blue-500 transition-colors">Facebook</a>
+                <a href="https://x.com/Ivia_95" class="hover:text-blue-500 transition-colors">Twitter</a>
+                <a href="https://wa.me/0745496919" class="hover:text-blue-500 transition-colors">WhatsApp</a>
+                <a href="https://www.linkedin.com/in/andrew-ivia-405796248/" class="hover:text-blue-500 transition-colors">LinkedIn</a>
+                <a href="https://www.instagram.com/ivia_95/" class="hover:text-blue-500 transition-colors">Instagram</a>
+                <a href="https://github.com/Ivia95" class="hover:text-blue-500 transition-colors">GitHub</a>
+            </div>
+            <p>© 2024 Andrew Ivia My Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
